@@ -3,6 +3,7 @@ FROM ubuntu:18.04
 # To make it easier for build and release pipelines to run apt-get,
 # configure apt to not require confirmation (assume the -y argument by default)
 ENV DEBIAN_FRONTEND=noninteractive
+ENV GHRUNNER_VERSION=2.278.0
 RUN echo "APT::Get::Assume-Yes \"true\";" > /etc/apt/apt.conf.d/90assumeyes
 
 # Update Ubuntu Distrubution
@@ -55,16 +56,14 @@ RUN cd /tmp/installscripts && \
     apt-get -y autoremove
 
 WORKDIR /actions-runner
-COPY install_actions.sh /actions-runner
+COPY installscripts/install_actions.sh /actions-runner
 
 RUN chmod +x /actions-runner/install_actions.sh \
-  && /actions-runner/install_actions.sh 2.278.0 \
+  && /actions-runner/install_actions.sh ${GHRUNNER_VERSION} \
   && rm /actions-runner/install_actions.sh
 
 
 COPY  entrypoint.sh /
 RUN chmod +x /entrypoint.sh 
 
-ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/actions-runner/bin/runsvc.sh"]
-
+CMD ["/entrypoint.sh"]

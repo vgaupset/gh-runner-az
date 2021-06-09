@@ -1,9 +1,4 @@
 #!/bin/bash
-################################################################################
-##  File:  powershellcore.sh
-##  Team:  CI-Platform
-##  Desc:  Installs powershellcore
-################################################################################
 
 # Install Powershell
 apt-get install -y powershell

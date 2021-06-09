@@ -1,9 +1,4 @@
 #!/bin/bash
-################################################################################
-##  File:  kubecli.sh
-##  Team:  CI-Platform
-##  Desc:  Installed Kube CLI (az)
-################################################################################
 
 #Install Kube CLI with Azure CLI
 az aks install-cli

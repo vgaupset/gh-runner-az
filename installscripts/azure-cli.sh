@@ -1,10 +1,4 @@
 #!/bin/bash
-################################################################################
-##  File:  azure-cli.sh
-##  Team:  CI-Platform
-##  Desc:  Installed Azure CLI (az)
-################################################################################
-
 
 LSB_CODENAME=$(awk -F "=" 'FNR == 3 {print $2}' /etc/lsb-release)
 

@@ -1,9 +1,4 @@
 #!/bin/bash
-################################################################################
-##  File:  repos.sh
-##  Team:  CI-Platform
-##  Desc:  Installs official Microsoft package repos for the distribution
-################################################################################
 
 LSB_RELEASE=$(awk -F "=" 'FNR == 2 {print $2}' /etc/lsb-release)
 echo $LSB_RELEASE

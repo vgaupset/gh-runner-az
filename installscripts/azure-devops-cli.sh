@@ -1,9 +1,4 @@
 #!/bin/bash
-################################################################################
-##  File:  azure-devops-cli.sh
-##  Team:  Protocol CLI
-##  Desc:  Installed Azure DevOps CLI (az devops)
-################################################################################
 
 # install azure devops Cli extension
 az extension add -n azure-devops

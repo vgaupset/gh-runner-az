@@ -1,9 +1,4 @@
 #!/bin/bash
-################################################################################
-##  File:  azcopy.sh
-##  Team:  CI-Platform
-##  Desc:  Installs AzCopy
-################################################################################
 
 # Install AzCopy
 wget -O azcopy.tar.gz https://aka.ms/downloadazcopylinux64
