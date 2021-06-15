@@ -1,6 +1,8 @@
 # gh-runner-az
 Container image to be used with Github Actions. 
 
+[![Dockerhub](https://img.shields.io/docker/pulls/vgaupset/gh-runner-az.svg)](https://hub.docker.com/r/vgaupset/gh-runner-az)
+
 **Installed pwsh Modules:**
 - Az
 - Azure-cli
